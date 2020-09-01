@@ -1,3 +1,6 @@
+//Runtime: 8 ms, faster than 89.43% of C++ online submissions for Combination Sum.
+//Memory Usage: 10.9 MB, less than 74.74% of C++ online submissions for Combination Sum.
+
 class Solution {
 public:
     void DFS(vector<vector<int>> &ans, vector<int> &comb ,vector<int> &candidates, int target,int idx)
