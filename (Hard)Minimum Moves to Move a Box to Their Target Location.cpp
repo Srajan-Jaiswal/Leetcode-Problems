@@ -59,8 +59,6 @@ public:
                 if(boxPos.first == posT.first && boxPos.second == posT.second) {
                     return;
                 }
-                // to check person can push box..... then we need to check can  we put person  oppsite to box direction
-                
                 for(int dir = 0; dir < 4; dir++) {
                     int bx , by;
                     bx = dx[dir] + boxPos.first;
@@ -70,8 +68,8 @@ public:
                         
                         vis[bx][by][dir] = 1;
                         vector<pair<int,int> > vt;
-                        vt.push_back({bx,by});// box new postion
-                        vt.push_back(boxPos); // now person at boxPos
+                        vt.push_back({bx,by});
+                        vt.push_back(boxPos);
                         q.push(vt);
                     }
                     
@@ -83,7 +81,7 @@ public:
             steps++;
         }
         
-        steps = -1; // we can't able to move box to target position
+        steps = -1; 
         return;
     }
     
