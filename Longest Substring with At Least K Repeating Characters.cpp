@@ -1,3 +1,7 @@
+// Runtime: 368 ms, faster than 9.05% of C++ online submissions for Longest Substring with At Least K Repeating Characters.
+// Memory Usage: 6.7 MB, less than 61.97% of C++ online submissions for Longest Substring with At Least K Repeating Characters.
+
+
 class Solution {
 public:
     string temp = "";
