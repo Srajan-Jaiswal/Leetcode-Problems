@@ -1,3 +1,6 @@
+// Runtime: 28 ms, faster than 88.99% of C++ online submissions for Count Complete Tree Nodes.
+//  Memory Usage: 31.5 MB, less than 30.65% of C++ online submissions for Count Complete Tree
+
 /**
  * Definition for a binary tree node.
  * struct TreeNode {
