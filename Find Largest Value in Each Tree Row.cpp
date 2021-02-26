@@ -13,7 +13,12 @@
  */
 class Solution {
 public:
- vector<int> largestValues(TreeNode* root) {
+     Solution(){
+        ios::sync_with_stdio(0);
+        cin.tie(0);
+        cout.tie(0);
+    }
+ /* vector<int> largestValues(TreeNode* root) {
  vector <int> ans;
   if (root == nullptr) return ans;
   queue <TreeNode *> q;
@@ -35,5 +40,23 @@ public:
       ans.push_back(maxi);
   }
   return ans;
+  }*/
+    
+   vector<int> ans; 
+  
+   void dfs(TreeNode* root,int level,vector<int> &ans)
+   {
+       if(root==nullptr) return;
+       if(ans.size() == level){
+           ans.push_back(root->val);
+       }
+       else ans[level] = max(ans[level],root->val);
+       dfs(root->left,level+1,ans);
+       dfs(root->right,level+1,ans);
+   }
+   vector<int> largestValues(TreeNode* root) {
+     vector<int> ans; 
+     dfs(root,0,ans);  
+     return ans;  
   }
 };
